@@ -1,0 +1,29 @@
+{
+  "name": "js-modal",
+  "version": "1.0.0",
+  "description": "Modal dialog on pure js with random fotos",
+  "main": "index.html",
+  "scripts": {
+    "test": "miptleha-http"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/miptleha/js-modal.git"
+  },
+  "keywords": [
+    "JavaScript",
+    "HTML",
+    "CSS",
+    "Modal",
+    "Dialog"
+  ],
+  "author": "miptleha",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/miptleha/js-modal/issues"
+  },
+  "homepage": "https://github.com/miptleha/js-modal#readme",
+  "devDependencies": {
+    "miptleha-http": "*"
+  }
+}
