@@ -5,10 +5,106 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .dialog-template {
+            display: none;
+            position: fixed;
+            left: 0;
+            right: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 9999;
+            background-color: rgba(50, 50, 50, 0.8);
+        }
+        .dialog-content {
+            display: none;
+        }
+        .dialog-close-header {
+            width: 30px;
+        }
+        .dialog-close-header::before, .dialog-close-header::after {
+            content: "";
+            border-top: 5px solid black;
+        }
+        .dialog-close-header::before {
+            transform: rotate(45deg);
+        }
+        .dialog-close-header::after {
+            transform: rotate(-45deg);
+        }
+        .dialog-wrap {
+            max-width: 700px;
+            width: 100%;
+            margin: 0 auto;
+            max-height: 80%;
+            border: 1px solid silver;
+            border-radius: 3px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 5px;
+        }
+        .dialog-content-header {
+            margin: 0 5px 5px 5px;
+        }
+
+    </style>
 </head>
 <body>
-    <p>Hello world!</p>
-    <p>There is no dialog here, because it is not created</p>
-    <p>Please, give me some time</p>
+    <!-- link opening dialog -->
+    <a href="#photo" class="link-open-dialog">Show dialog</a>
+
+    <!-- dialog template -->
+    <div id="dialog" class="dialog-template">
+        <div class="dialog-wrap">
+            <div class="dialog-close-header --close-dialog"></div>
+            <div class="dialog-body"></div>
+            <button class="dialog-close --close-dialog">Close dialog</button>
+        </div>
+    </div>
+
+    <!-- specific dialog content -->
+    <div id="photo" class="dialog-content">
+        <div class="dialog-content-header">Some photos</div>
+        <div class="dialog-content-data">
+            <img src="https://picsum.photos/100/100?1">
+            <img src="https://picsum.photos/100/100?2">
+            <img src="https://picsum.photos/100/100?3">
+            <img src="https://picsum.photos/100/100?4">
+            <img src="https://picsum.photos/100/100?5">
+            <img src="https://picsum.photos/100/100?6">
+            <img src="https://picsum.photos/100/100?7">
+            <img src="https://picsum.photos/100/100?8">
+            <img src="https://picsum.photos/100/100?9">
+            <img src="https://picsum.photos/100/100?10">
+        </div>
+    </div>
+
+    <script>
+        let dt = document.getElementById('dialog');
+        let db = dt.querySelector('.dialog-body');
+        
+        document.addEventListener('click', function(e) {
+            let t = e.target;
+            let dc = document.querySelector(t.getAttribute('href'));
+
+            if (t.classList.contains('link-open-dialog')) {
+                //click on link: open dialog
+                e.preventDefault();
+                db.appendChild(dc);
+                dt.style.display = 'block';
+                dc.style.display = 'block';
+            }
+            else if (t.classList.contains('--close-dialog') ||
+                    t.classList.contains('dialog-overlay')) {
+                //click close buttons or background: close dialog
+                e.preventDefault();
+                dt.style.display = '';
+                dc.style.display = '';
+                document.body.appendChild(dc);
+            }
+        })
+
+    </script>
 </body>
 </html>

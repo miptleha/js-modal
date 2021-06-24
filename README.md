@@ -9,3 +9,5 @@ npm it
 ```
 
 This will download the sources from github and run index.html on a static http-server
+
+All code inside [index.html](index.html)
