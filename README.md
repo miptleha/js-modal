@@ -1,13 +1,17 @@
 Modal dialog on pure JavaScript with random fotos
 
+Works in all modern browser, ie11+ (ie9 with some artifacts)
+
 ## How to run
 
+Open in browser:
+https://miptleha.github.io/js-modal/
+
+Or download and run:
 ```
 git clone https://github.com/miptleha/js-modal.git
 cd js-modal
 npm it
 ```
-
-This will download the sources from github and run index.html on a static http-server
 
 All code inside [index.html](index.html)
