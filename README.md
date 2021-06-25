@@ -1,4 +1,4 @@
-Modal dialog on pure JavaScript with random fotos
+Modal dialog on pure JavaScript
 
 Works in all modern browser, ie11+ (ie9 with some artifacts)
 
