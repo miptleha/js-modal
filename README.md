@@ -40,4 +40,4 @@ Sample dialogs:
 <div id="dialog-sample2" class="dialog">Dialog without header</div>
 ```
 
-To use the dialog on your site, you need to copy the styles, template and Javascript code from [index.html](index.html)
+To use the dialog on your site, you need to copy the styles, template and JavaScript code from [index.html](index.html)
