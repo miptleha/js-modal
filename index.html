@@ -24,7 +24,7 @@
             background-color: rgba(233, 235, 237, 0.75);
         }
 
-        .dialog-template-wrap {
+        .dialog-template__wrap {
             max-width: 600px;
             width: 100%;
             height: 100%;
@@ -34,13 +34,16 @@
             justify-content: center;
         }
 
-        .dialog-template-header {
+        .dialog-template__header {
             text-align: center;
             padding: .25rem;
             margin-bottom: .25rem;
+            flex: 0 0 auto;
+            margin: 0 1rem 1rem 1rem;
+            align-self: center;
         }
 
-        .dialog-template-block {
+        .dialog-template__block {
             background-color: white;
             max-height: 80%;
             border-radius: .25rem;
@@ -53,13 +56,7 @@
             box-shadow: 0 .5rem 1rem rgba(0,0,0,.15) !important;
         }
 
-        .dialog-template-header {
-            flex: 0 0 auto;
-            margin: 0 1rem 1rem 1rem;
-            align-self: center;
-        }
-
-        .dialog-template-body {
+        .dialog-template__body {
             min-height: 50px;
             overflow: auto;
             flex-basis: auto;
@@ -67,13 +64,29 @@
             max-width: 100%; /* ie fix */
         }
 
-        .dialog-template-button {
+        .dialog-template__button {
             flex: 0 0 auto;
             align-self: start;
+
+            color: #212529;
+            text-align: center;
+            text-decoration: none;
+            vertical-align: middle;
             cursor: pointer;
+            user-select: none;
+            border: 1px solid #6c757d;
+            padding: .375rem .75rem;
+            border-radius: .25rem;
+            transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
         }
 
-        .dialog-template-close {
+        .dialog-template__button:hover {
+            color: #fff;
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+
+        .dialog-template__close {
             width: 20px;
             height: 20px;
             position: absolute;
@@ -83,8 +96,8 @@
             display: block;
         }
 
-        .dialog-template-close::before,
-        .dialog-template-close::after {
+        .dialog-template__close::before,
+        .dialog-template__close::after {
             content: "";
             width: 16px;
             height: 2px;
@@ -95,11 +108,11 @@
             left: 50%;
         }
 
-        .dialog-template-close::before {
+        .dialog-template__close::before {
             transform: translate(-50%, -50%) rotate(45deg);
         }
 
-        .dialog-template-close::after {
+        .dialog-template__close::after {
             transform: translate(-50%, -50%) rotate(-45deg);
         }
 
@@ -120,20 +133,20 @@
 
     <!-- dialog template -->
     <div id="dialog-template" class="dialog-template">
-        <div class="dialog-template-wrap">
-            <div class="dialog-template-block">
-                <div class="dialog-template-close --dialog-template-close"></div>
-                <div class="dialog-template-header"></div>
-                <div class="dialog-template-body"></div>
-                <button class="dialog-template-button --dialog-template-close">Close dialog</button>
+        <div class="dialog-template__wrap">
+            <div class="dialog-template__block">
+                <div class="dialog-template__close --dialog-template__close"></div>
+                <div class="dialog-template__header"></div>
+                <div class="dialog-template__body"></div>
+                <button class="dialog-template__button --dialog-template__close">Close dialog</button>
             </div>
         </div>
     </div>
 
     <!-- dialogs -->
     <div id="dialog-photo" class="dialog">
-        <div class="dialog-header">Some photos</div>
-        <div class="dialog-content">
+        <div class="dialog__header">Some photos</div>
+        <div class="dialog__content">
             <img src="https://picsum.photos/100/100?1">
             <img src="https://picsum.photos/100/100?2">
             <img src="https://picsum.photos/100/100?3">
@@ -156,8 +169,8 @@
     </div>
 
     <div id="dialog-large-text" class="dialog">
-        <div class="dialog-header">Large text</div>
-        <div class="dialog-content">
+        <div class="dialog__header">Large text</div>
+        <div class="dialog__content">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis labore necessitatibus rerum alias sequi quaerat, nostrum aspernatur libero nam vero magni quia maiores ipsum aperiam sit eveniet excepturi minima ducimus repudiandae doloremque dolorum, corporis nulla cum neque. Labore et, saepe ipsam cum enim voluptatibus dolores quis adipisci magni ipsa a aut repellat dignissimos reiciendis iure aspernatur in, ducimus officia perferendis eveniet facilis? Expedita iusto a omnis iste eum eius nesciunt neque dolor maxime accusantium praesentium harum, temporibus dignissimos impedit quos dicta labore, aliquam quibusdam porro rerum assumenda adipisci. At, aspernatur. Molestiae reprehenderit natus culpa eius nam et omnis assumenda consequatur quam, incidunt ratione minima tenetur modi ducimus libero. Nemo facere fugiat veniam culpa optio voluptatem architecto accusamus recusandae, eaque quo sunt qui aspernatur fugit doloremque dignissimos exercitationem provident porro totam odio, mollitia maiores nihil. Minus, cupiditate asperiores! Harum sint, suscipit animi quia ipsa vero maiores distinctio sed dolore, fuga commodi eveniet provident incidunt. Adipisci nobis quaerat unde incidunt dolor quia enim eos praesentium excepturi velit totam voluptatum, deserunt libero animi facere quae autem. Placeat perspiciatis repellendus at officiis reprehenderit id qui eveniet adipisci, accusantium odio ipsa rem iste, quasi et aliquam sit harum voluptate laborum eligendi. Accusamus temporibus provident repellendus exercitationem nam. Aut quae, reprehenderit recusandae possimus iste animi quis tempora quidem neque. Laboriosam amet officia deserunt ad optio, nobis pariatur, omnis maxime commodi quis eius consequuntur eveniet? A est culpa sed. Adipisci natus, accusantium sequi alias dicta tempore incidunt, molestias delectus similique, nobis repudiandae repellat reiciendis vero quibusdam commodi porro aliquam sapiente quae quidem exercitationem harum animi maiores rerum nemo. Autem voluptates dicta animi culpa? Explicabo possimus adipisci animi corporis. Qui, omnis in. Quibusdam facilis exercitationem dolor ullam impedit, expedita animi molestiae quisquam voluptate inventore dolore ducimus. Velit sapiente, magnam incidunt nam odio veniam, maxime qui debitis, accusantium consequatur eos rem quasi nulla voluptas atque? Id magnam tenetur quo consequuntur porro rem repellat, fugiat repellendus voluptatibus neque deserunt numquam. Sapiente, nemo similique. Ipsam modi ad facere blanditiis sed tempore quibusdam saepe quaerat! Est illo beatae odio voluptatum repellat quasi id distinctio pariatur aut ad? Ab facere hic ducimus. Magni asperiores rerum aspernatur a corporis ullam dolorum, eaque dolores. Quod, necessitatibus non molestias voluptate provident, impedit quis, tempora at earum perferendis ipsa commodi vel asperiores dignissimos illo magnam. Repellendus accusamus optio reprehenderit placeat ex labore? Eaque minus repellendus est consequuntur incidunt ab eum maxime quod blanditiis accusantium veritatis perferendis distinctio, aliquam aperiam quis tempore numquam deleniti explicabo, laborum commodi consequatur doloribus. Quasi sed ipsa officiis laborum iusto laudantium, rem minus magni aliquam velit recusandae ea numquam alias itaque quas inventore eius. Delectus aliquid aut nisi quas blanditiis quibusdam exercitationem obcaecati. Delectus consectetur odio, fugit sit ullam dolore eaque ut porro vero autem modi velit at suscipit eius ratione nostrum cum iste molestias. Ad obcaecati est perferendis commodi voluptatibus similique, nulla nesciunt ipsa voluptate hic corporis natus quaerat cupiditate consequuntur, ut ea amet adipisci! Accusantium doloremque deleniti, doloribus est ipsa similique ea aliquam alias officiis, earum veritatis cum libero molestiae harum optio eos fuga nemo sit eligendi consequuntur quo. Voluptatem, aliquid quibusdam blanditiis aut recusandae, minus harum id ipsam neque sed quam molestiae, voluptates atque esse. Earum natus molestias omnis cumque quo porro perferendis repudiandae nihil non placeat id dolor itaque vitae fuga dolore voluptate aut explicabo nisi amet, rem atque fugiat repellendus? Minus repudiandae provident pariatur nesciunt in ullam, aperiam sit eos est consectetur sapiente voluptates culpa dicta labore reiciendis accusantium consequuntur esse nemo quis placeat vitae! Magnam quasi nobis repellendus, doloribus repellat aut at temporibus nam, natus harum obcaecati laboriosam ab excepturi quibusdam tenetur adipisci cupiditate libero! Non repellat excepturi blanditiis eos quidem, dolores optio consectetur vero nihil veniam quaerat corrupti voluptatibus quibusdam itaque recusandae earum voluptate ea assumenda. Placeat accusamus aut perferendis sunt debitis earum ad nisi temporibus sapiente asperiores, aliquid dolorum fugiat odit laboriosam optio a recusandae tempora, nesciunt nam sed nihil! Corporis, nisi! Minus a dicta laborum quibusdam nam autem temporibus provident maxime deserunt quia error et sed tempora veritatis natus harum, suscipit alias accusamus atque sapiente unde expedita fuga molestiae. Dolorum nulla fuga harum, amet molestias impedit ratione neque ea porro tenetur illo eos consequatur nobis reprehenderit beatae magni veritatis aspernatur quaerat velit, placeat odit dignissimos. Repellendus laborum sunt laudantium dolor officiis sequi voluptas ducimus et facere perferendis! Debitis, eius expedita molestiae eos ullam odit voluptas labore cum officiis totam fugiat in exercitationem commodi esse vel error aperiam minus. Ipsum ipsa odit, minima quas fuga expedita, nihil molestias amet quo officia repudiandae nostrum praesentium iste. Mollitia nihil reprehenderit excepturi eveniet sequi quo quaerat? Asperiores quos ipsum voluptate? Neque minima, error, amet repellendus nisi libero dolorum, iusto exercitationem sapiente ipsa laborum voluptate deserunt culpa ut necessitatibus non? Rem hic sunt minus tenetur cupiditate unde esse ad quae voluptatibus. Soluta ullam provident consequuntur modi, optio necessitatibus, distinctio, quisquam sequi quos a laborum. Repellendus labore non, quo iste fugit aliquid eum quae quidem nisi id officia, mollitia quas explicabo cum, atque omnis odio. Ea pariatur aliquid odio, debitis labore corrupti sint alias nemo mollitia laboriosam inventore dicta adipisci doloremque dolorem sapiente! Beatae amet culpa earum laboriosam perspiciatis possimus sapiente quam alias cupiditate quasi, nam, ad quos, ipsam nesciunt doloremque in praesentium blanditiis reprehenderit. Repellat numquam quis atque, cum qui ullam adipisci eius? Harum nostrum perspiciatis odit aut ullam dolore, possimus facilis voluptate eius, modi quo inventore aliquam nemo. Commodi molestiae est fugit architecto officia in sunt maiores ea quidem libero aut earum cumque, temporibus quo neque rem soluta quam nisi sit. Nostrum adipisci earum beatae accusantium eaque placeat deserunt, saepe in architecto aperiam harum facilis autem nemo quod dolores et sint amet doloribus maiores quaerat quisquam at nobis error? Voluptas nam eligendi debitis. Nihil adipisci consectetur sed alias ipsam repudiandae perspiciatis officia odio explicabo magnam fugit unde, ab in distinctio obcaecati! Quis, ducimus porro quidem explicabo nostrum id, sit voluptatum nesciunt voluptatibus eius ea. Cupiditate maxime omnis odio, voluptatum in error ducimus porro ratione atque! Quisquam, quod placeat, corrupti non incidunt vitae esse, debitis dolorum atque porro autem!
         </div>
     </div>
@@ -167,18 +180,18 @@
     <p>Dialogs from README</p>
     <a href="#dialog-sample" class="open-dialog">Open dialog</a>
     <div id="dialog-sample" class="dialog">
-        <div class="dialog-header">Header text</div>
-        <div class="dialog-content">Any html content</div>
+        <div class="dialog__header">Header text</div>
+        <div class="dialog__content">Any html content</div>
     </div>
     
     <a href="#dialog-sample2" class="open-dialog">Open dialog2</a>
     <div id="dialog-sample2" class="dialog">Dialog without header</div>
-    
+
     <!-- dialog JS code -->
     <script>
         var tt = document.getElementById('dialog-template');
-        var tb = tt.querySelector('.dialog-template-body');
-        var th = tt.querySelector('.dialog-template-header');
+        var tb = tt.querySelector('.dialog-template__body');
+        var th = tt.querySelector('.dialog-template__header');
         var dd, dc, dh;
 
         document.addEventListener('click', function (e) {
@@ -195,16 +208,16 @@
                 }
 
                 //move content of dialog into template
-                dc = dd.querySelector('.dialog-content') || dd;
-                dh = dc == dd ? null : dd.querySelector('.dialog-header');
+                dc = dd.querySelector('.dialog__content') || dd;
+                dh = dc == dd ? null : dd.querySelector('.dialog__header');
                 while (dc.firstChild)
                     tb.appendChild(dc.firstChild);
                 if (dh)
                     th.innerHTML = dh.innerHTML;
                 tt.style.display = 'block';
             }
-            else if (dc != null && (t.className.indexOf('--dialog-template-close') != -1 ||
-                t.className == 'dialog-template' || t.className == 'dialog-template-wrap')) {
+            else if (dc != null && (t.className.indexOf('--dialog-template__close') != -1 ||
+                t.className == 'dialog-template' || t.className == 'dialog-template__wrap')) {
                 //click close buttons or background: close dialog
                 e.preventDefault();
                 tt.style.display = '';

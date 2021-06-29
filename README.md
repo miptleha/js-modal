@@ -32,8 +32,8 @@ Sample dialogs:
 ```html
 <a href="#dialog-sample" class="open-dialog">Open dialog</a>
 <div id="dialog-sample" class="dialog">
-    <div class="dialog-header">Header text</div>
-    <div class="dialog-content">Any html content</div>
+    <div class="dialog__header">Header text</div>
+    <div class="dialog__content">Any html content</div>
 </div>
 
 <a href="#dialog-sample2" class="open-dialog">Open dialog2</a>
